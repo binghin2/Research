@@ -1,0 +1,23 @@
+{
+  "input_dim": 3,
+  "num_classes": 3,
+  "class_names": [
+    "Apple Red",
+    "Avocado",
+    "Banana"
+  ],
+  "train_accuracy": 1.0,
+  "test_accuracy": 1.0,
+  "num_samples": 30,
+  "scaler_mean": [
+    0.3585621039072672,
+    0.394379086792469,
+    0.24143791596094769
+  ],
+  "scaler_scale": [
+    0.13919703804476632,
+    0.11208043155138409,
+    0.045986516404846134
+  ],
+  "architecture": "3 \u2192 64 \u2192 32 \u2192 3"
+}

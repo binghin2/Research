@@ -1,0 +1,26 @@
+{
+  "input_dim": 3,
+  "num_classes": 6,
+  "class_names": [
+    "Blue",
+    "Green",
+    "Orange",
+    "Purple",
+    "Red",
+    "Yellow"
+  ],
+  "train_accuracy": 1.0,
+  "test_accuracy": 1.0,
+  "num_samples": 900,
+  "scaler_mean": [
+    0.5110021978616714,
+    0.2810936877131462,
+    0.20212200969457628
+  ],
+  "scaler_scale": [
+    0.12599836152282223,
+    0.06983551944435318,
+    0.07900481850520022
+  ],
+  "architecture": "3 \u2192 64 \u2192 32 \u2192 6"
+}
