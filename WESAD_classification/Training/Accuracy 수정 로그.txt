@@ -1,0 +1,11 @@
+Accuracy 수정 로그
+오후 5:35 2026-02-25
+
+Train, Test data의 Stride 를 1초로 설정해놈
+그럼 Train 에 1~60초의 데이터가 들어가고, 
+Test 에 2~61초 데이터가 들어가게 됨
+
+Data Leakage 를 극복하였음
+그 결과 Accuracy 100 -> 31 하락
+이제 높일일만 남았음
+
