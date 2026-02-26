@@ -9,3 +9,9 @@ Data Leakage 를 극복하였음
 그 결과 Accuracy 100 -> 31 하락
 이제 높일일만 남았음
 
+오후 2:27 2026-02-26
+
+Accuracy 31 -> 55.96 %
+Subject -wise normalization 진행하고,
+LOSO 교차 검증을 진행하여 정확도가 상승함
+
