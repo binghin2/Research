@@ -7,11 +7,28 @@ Test 에 2~61초 데이터가 들어가게 됨
 
 Data Leakage 를 극복하였음
 그 결과 Accuracy 100 -> 31 하락
-이제 높일일만 남았음
+
 
 오후 2:27 2026-02-26
 
 Accuracy 31 -> 55.96 %
 Subject -wise normalization 진행하고,
 LOSO 교차 검증을 진행하여 정확도가 상승함
+
+오후 2:06 2026-03-03
+Train, Val, Test 
+로 Data Split 진행함 
+Accuracy 55.96% -> 67.59%
+
+오후 2:52 2026-03-03
+Train_stride = 1 -> 10으로 늘리고
+Dropout 또한 0.2 -> 0.5로 늘림
+
+Accuracy는 줄었지만,
+Amusement의 Recall이 오름 
+
+이전에는 10%에 불과하였지만, 
+현재 44.44%
+이 뜻은 이전에는 그냥 Amusement를 거의 무시하였음. 현재는
+잡긴 하는중임
 
