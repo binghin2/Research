@@ -32,3 +32,36 @@ Amusement의 Recall이 오름
 이 뜻은 이전에는 그냥 Amusement를 거의 무시하였음. 현재는
 잡긴 하는중임
 
+오후 3:19 2026-03-03
+BVP signal을 resampling하여
+HR, HRV를 추출. 그걸 토대로 학습에 진행하였음
+
+Test Accuracy: 64.81 %
+
+Classification Report:
+              precision    recall  f1-score   support
+
+    baseline       0.82      0.63      0.71        57
+      stress       0.67      0.97      0.79        33
+   amusement       0.12      0.11      0.12        18
+
+    accuracy                           0.65       108
+   macro avg       0.54      0.57      0.54       108
+weighted avg       0.66      0.65      0.64       108
+
+
+============================================================
+각 상태별 정확도
+============================================================
+Baseline: 63.16% (36/57)
+Stress: 96.97% (32/33)
+Amusement: 11.11% (2/18)
+============================================================
+
+오후 3:23 2026-03-03
+epoch 를 10 -> 50
+LR 0.001 -> 0.0005 
+Early stopping 
+Patience 5 -> 10으로 늘림
+
+
