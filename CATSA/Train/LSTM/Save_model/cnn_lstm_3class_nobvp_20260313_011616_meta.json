@@ -1,0 +1,23 @@
+{
+  "checkpoint_path": "/home/binghin2/Myproject/Research/CATSA/Train/LSTM/Save_model/cnn_lstm_3class_nobvp_20260313_011616.pth",
+  "created_at": "20260313_011616",
+  "device": "cuda",
+  "model_type": "MultiBranchCNNLSTM",
+  "num_classes": 3,
+  "classes": [
+    "Rest",
+    "Distress",
+    "DeepFlow"
+  ],
+  "train_stride_sec": 20,
+  "normalization": "subject_baseline_zscore",
+  "baseline_task": "Baseline",
+  "slow_channels": [
+    "EDA_tonic",
+    "EDA_phasic",
+    "TEMP",
+    "HR",
+    "HRV"
+  ],
+  "raw_bvp_branch_used": false
+}

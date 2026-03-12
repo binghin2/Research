@@ -1,0 +1,41 @@
+{
+  "checkpoint_path": "/home/binghin2/Myproject/Research/CATSA/Train/GRU/Save_model/cnn_gru_4class_merge3_nobvp_20260313_013732.pth",
+  "created_at": "20260313_013732",
+  "device": "cuda",
+  "model_type": "MultiBranchCNNGRU",
+  "train_classes_4": [
+    "Rest",
+    "Distress",
+    "LogicFlow",
+    "SudokuFlow"
+  ],
+  "eval_classes_3": [
+    "Rest",
+    "Distress",
+    "DeepFlow"
+  ],
+  "merge_map_4to3": {
+    "0": 0,
+    "1": 1,
+    "2": 2,
+    "3": 2
+  },
+  "train_stride_sec": 20,
+  "normalization": "subject_baseline_zscore",
+  "baseline_task": "Baseline",
+  "slow_channels": [
+    "EDA_tonic",
+    "EDA_phasic",
+    "TEMP",
+    "HR",
+    "HRV"
+  ],
+  "raw_bvp_branch_used": false,
+  "use_manual_class_weights": false,
+  "manual_class_weights": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ]
+}

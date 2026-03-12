@@ -1,0 +1,11 @@
+/home/binghin2/Myproject/Research/CATSA/Train/LSTM/Save_model/cnn_lstm_3class_nobvp_20260313_011032_meta.json
+Train stride 30초, Val/Test stride 60초
+Weighted sampler 적용
+Focal Loss 적용 (gamma 2.0)
+
+
+/home/binghin2/Myproject/Research/CATSA/Train/LSTM/Save_model/cnn_lstm_3class_nobvp_20260313_011901_meta.json
+USE_WEIGHTED_SAMPLER = False
+USE_CLASS_WEIGHTS = True
+USE_FOCAL_LOSS = False
+TRAIN_STRIDE_SEC = 20

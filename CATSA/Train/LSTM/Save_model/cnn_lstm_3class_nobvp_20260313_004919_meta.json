@@ -1,0 +1,13 @@
+{
+  "checkpoint_path": "/home/binghin2/Myproject/Research/CATSA/Train/LSTM/Save_model/cnn_lstm_3class_nobvp_20260313_004919.pth",
+  "created_at": "20260313_004919",
+  "device": "cuda",
+  "model_type": "MultiBranchCNNLSTM",
+  "num_classes": 3,
+  "classes": [
+    "Rest",
+    "Distress",
+    "DeepFlow"
+  ],
+  "raw_bvp_branch_used": false
+}

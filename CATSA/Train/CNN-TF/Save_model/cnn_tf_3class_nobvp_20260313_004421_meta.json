@@ -1,0 +1,12 @@
+{
+  "checkpoint_path": "/home/binghin2/Myproject/Research/CATSA/Train/CNN-TF/Save_model/cnn_tf_3class_nobvp_20260313_004421.pth",
+  "created_at": "20260313_004421",
+  "device": "cuda",
+  "num_classes": 3,
+  "classes": [
+    "Rest",
+    "Distress",
+    "DeepFlow"
+  ],
+  "raw_bvp_branch_used": false
+}
