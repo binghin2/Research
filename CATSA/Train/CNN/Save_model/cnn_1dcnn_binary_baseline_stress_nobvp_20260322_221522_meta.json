@@ -1,0 +1,28 @@
+{
+  "checkpoint_path": "/home/binghin2/Myproject/Research/CATSA/Train/CNN/Save_model/cnn_1dcnn_binary_baseline_stress_nobvp_20260322_221522.pth",
+  "created_at": "20260322_221522",
+  "device": "cuda",
+  "model_type": "MultiBranchPureCNN",
+  "class_names": [
+    "Baseline",
+    "Stress"
+  ],
+  "train_stride_sec": 20,
+  "experiment_preset": "val_loss_min",
+  "normalization": "subject_baseline_zscore",
+  "baseline_task": "Baseline",
+  "slow_channels": [
+    "EDA_tonic",
+    "EDA_phasic",
+    "TEMP",
+    "HR",
+    "HRV"
+  ],
+  "raw_bvp_branch_used": false,
+  "use_manual_class_weights": false,
+  "manual_class_weights": [
+    1.0,
+    1.0
+  ],
+  "label_smoothing": 0.05
+}
