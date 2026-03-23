@@ -1,0 +1,127 @@
+{
+  "analysis_date": "2026-03-23 10:10:30",
+  "total_subjects": 50,
+  "task_summary": {
+    "Baseline": {
+      "n_subjects": 50,
+      "hr_mean": "88.6 ± 10.2",
+      "hrv_mean": "0.08 ± 0.05",
+      "eda_phasic_mean": "-0.01 ± 0.04",
+      "temp_mean": "34.4 ± 1.5",
+      "acc_mag_mean": "10.00 ± 0.00"
+    },
+    "Nback": {
+      "n_subjects": 50,
+      "hr_mean": "91.9 ± 11.4",
+      "hrv_mean": "0.09 ± 0.05",
+      "eda_phasic_mean": "0.00 ± 0.00",
+      "temp_mean": "34.5 ± 1.5",
+      "acc_mag_mean": "10.00 ± 0.00"
+    },
+    "Stroop": {
+      "n_subjects": 50,
+      "hr_mean": "93.5 ± 11.6",
+      "hrv_mean": "0.10 ± 0.04",
+      "eda_phasic_mean": "0.00 ± 0.00",
+      "temp_mean": "34.5 ± 1.5",
+      "acc_mag_mean": "10.00 ± 0.00"
+    },
+    "Logic": {
+      "n_subjects": 50,
+      "hr_mean": "91.9 ± 11.5",
+      "hrv_mean": "0.08 ± 0.04",
+      "eda_phasic_mean": "-0.00 ± 0.00",
+      "temp_mean": "34.5 ± 1.6",
+      "acc_mag_mean": "10.00 ± 0.00"
+    },
+    "Sudoku": {
+      "n_subjects": 50,
+      "hr_mean": "94.3 ± 11.8",
+      "hrv_mean": "0.09 ± 0.05",
+      "eda_phasic_mean": "-0.00 ± 0.00",
+      "temp_mean": "34.6 ± 1.5",
+      "acc_mag_mean": "10.00 ± 0.00"
+    }
+  },
+  "task_correlations": {
+    "Baseline": {
+      "Baseline": 1.0,
+      "Nback": 0.9997648089437329,
+      "Stroop": 0.9990130025245438,
+      "Logic": 0.9990762770176103,
+      "Sudoku": 0.9990034778040806
+    },
+    "Nback": {
+      "Baseline": 0.9997648089437329,
+      "Nback": 1.0,
+      "Stroop": 0.9995197767822315,
+      "Logic": 0.9995588105714902,
+      "Sudoku": 0.9995930033108165
+    },
+    "Stroop": {
+      "Baseline": 0.9990130025245438,
+      "Nback": 0.9995197767822315,
+      "Stroop": 1.0,
+      "Logic": 0.9998528958216613,
+      "Sudoku": 0.9998779908656378
+    },
+    "Logic": {
+      "Baseline": 0.9990762770176103,
+      "Nback": 0.9995588105714902,
+      "Stroop": 0.9998528958216613,
+      "Logic": 1.0,
+      "Sudoku": 0.999924136035009
+    },
+    "Sudoku": {
+      "Baseline": 0.9990034778040806,
+      "Nback": 0.9995930033108165,
+      "Stroop": 0.9998779908656378,
+      "Logic": 0.999924136035009,
+      "Sudoku": 1.0
+    }
+  },
+  "task_distances": {
+    "Baseline": {
+      "Baseline": 0.0,
+      "Nback": 5.256412289018033,
+      "Stroop": 8.967192046469098,
+      "Logic": 7.138789269447873,
+      "Sudoku": 9.897040925921413
+    },
+    "Nback": {
+      "Baseline": 5.256412289018033,
+      "Nback": 0.0,
+      "Stroop": 4.775649573546466,
+      "Logic": 3.7935146677721474,
+      "Sudoku": 5.245917285634034
+    },
+    "Stroop": {
+      "Baseline": 8.967192046469098,
+      "Nback": 4.775649573546466,
+      "Stroop": 0.0,
+      "Logic": 3.0471986495505696,
+      "Sudoku": 2.21934663927417
+    },
+    "Logic": {
+      "Baseline": 7.138789269447873,
+      "Nback": 3.7935146677721474,
+      "Stroop": 3.0471986495505696,
+      "Logic": 0.0,
+      "Sudoku": 3.657171169859217
+    },
+    "Sudoku": {
+      "Baseline": 9.897040925921413,
+      "Nback": 5.245917285634034,
+      "Stroop": 2.21934663927417,
+      "Logic": 3.657171169859217,
+      "Sudoku": 0.0
+    }
+  },
+  "avg_stress_interask_correlation": 0.9997211022311411,
+  "avg_stress_vs_baseline_correlation": 0.9992143915724918,
+  "discriminative_features_count": 3,
+  "baseline_vs_stress_f1": 0.8893490381126054,
+  "stress_multiclass_f1": 0.3394710770538944,
+  "recommendation": "✅ CAN MERGE: Strong correlation, poor distinguishability",
+  "recommendation_reasoning": "The four stress tasks (Nback, Stroop, Logic, Sudoku) are physiologically similar and difficult to distinguish."
+}
