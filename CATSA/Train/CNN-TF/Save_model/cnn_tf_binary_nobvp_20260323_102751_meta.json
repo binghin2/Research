@@ -1,0 +1,13 @@
+{
+  "checkpoint_path": "/home/binghin2/Myproject/Research/CATSA/Train/CNN-TF/Save_model/cnn_tf_binary_nobvp_20260323_102751.pth",
+  "created_at": "20260323_102751",
+  "device": "cuda",
+  "num_classes": 2,
+  "classes": [
+    "NonStress",
+    "Stress"
+  ],
+  "loss": "FocalLoss",
+  "early_stopping_monitor": "val_macro_f1",
+  "raw_bvp_branch_used": false
+}
