@@ -1,3 +1,6 @@
 .aider*
 *.pt
 *.tar.gz
+__pycache__/
+*.pyc
+*.pyo
