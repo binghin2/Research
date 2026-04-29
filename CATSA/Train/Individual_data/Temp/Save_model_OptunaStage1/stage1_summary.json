@@ -126,6 +126,27 @@
     "total_time_min":1.5463736755
   },
   {
+    "model":"TransformerCNN",
+    "status":"OK",
+    "best_val_f1":0.9719626118,
+    "best_trial_num":11,
+    "n_trials_completed":13,
+    "n_trials_pruned":2,
+    "n_trials_failed":0,
+    "best_lr":0.0002699224,
+    "best_batch_size":32,
+    "best_dropout":0.3858776694,
+    "best_weight_decay":0.000105353,
+    "best_focal_gamma":2.0,
+    "best_model_specific":"{}",
+    "e4_accuracy":0.8461538462,
+    "e4_f1":0.9153737659,
+    "e4_precision":0.906424581,
+    "e4_recall":0.9245014245,
+    "e4_auroc":0.4710807948,
+    "total_time_min":2.0989988603
+  },
+  {
     "model":"iTransformer",
     "status":"OK",
     "best_val_f1":0.9717514074,

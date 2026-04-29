@@ -410,6 +410,37 @@ class Chronos2Classifier(nn.Module):
         return self.head(self._encode(x_sub)).squeeze(-1)
 
 
+# ─── 11. TransformerCNN ───────────────────────────────────────────────────────
+# 1D CNN frontend (local feature extraction) + Transformer encoder (global context).
+
+class TransformerCNNClassifier(nn.Module):
+    def __init__(self, seq_len=240, n_channels=1, d_model=128,
+                 n_heads=4, n_layers=2, d_ff=256, dropout=0.1,
+                 n_conv_layers=2, cnn_kernel=5):
+        super().__init__()
+        cnn = []
+        in_ch = n_channels
+        for i in range(n_conv_layers):
+            out_ch = d_model
+            cnn += [nn.Conv1d(in_ch, out_ch, cnn_kernel, padding=cnn_kernel // 2),
+                    nn.BatchNorm1d(out_ch), nn.GELU()]
+            in_ch = out_ch
+        self.cnn = nn.Sequential(*cnn)
+        self.pos = nn.Parameter(torch.randn(1, seq_len, d_model) * 0.02)
+        enc = nn.TransformerEncoderLayer(d_model, n_heads, d_ff, dropout,
+                                         batch_first=True, activation='gelu')
+        self.transformer = nn.TransformerEncoder(enc, n_layers)
+        self.norm = nn.LayerNorm(d_model)
+        self.head = nn.Sequential(nn.Linear(d_model, 64), nn.GELU(),
+                                  nn.Dropout(dropout), nn.Linear(64, 1))
+
+    def forward(self, x):                                    # [B, C, T]
+        h = self.cnn(x).transpose(1, 2)                     # [B, T, d_model]
+        h = h + self.pos[:, :h.shape[1]]
+        h = self.transformer(h)
+        return self.head(self.norm(h).mean(1)).squeeze(-1)
+
+
 # ─── Factory ──────────────────────────────────────────────────────────────────
 
 def build_model(name: str, W: int = 240, n_channels: int = 1, **kwargs):
@@ -470,4 +501,12 @@ def build_model(name: str, W: int = 240, n_channels: int = 1, **kwargs):
             raise ValueError("Chronos2 requires pipeline= keyword argument")
         return Chronos2Classifier(pipeline, subsample=4,
                                    dropout=kwargs.get('dropout', 0.3))
+    if name == "TransformerCNN":
+        return TransformerCNNClassifier(**common,
+            d_model=kwargs.get('d_model', 128),
+            n_heads=kwargs.get('n_heads', 4),
+            n_layers=kwargs.get('n_layers', 2),
+            d_ff=kwargs.get('d_ff', 256),
+            n_conv_layers=kwargs.get('n_conv_layers', 2),
+            cnn_kernel=kwargs.get('cnn_kernel', 5))
     raise ValueError(f"Unknown model: {name}")

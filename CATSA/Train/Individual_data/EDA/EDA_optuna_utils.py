@@ -78,6 +78,14 @@ MODEL_SEARCH_SPACES: dict[str, dict[str, Any]] = {
     "Chronos2": {
         "dropout": ("float", 0.1, 0.5, False),
     },
+    "TransformerCNN": {
+        "d_model":       ("categorical", [64, 128, 256]),
+        "n_heads":       ("categorical", [2, 4, 8]),
+        "n_layers":      ("int", 1, 4),
+        "d_ff":          ("categorical", [128, 256, 512]),
+        "n_conv_layers": ("int", 1, 3),
+        "cnn_kernel":    ("categorical", [3, 5, 7]),
+    },
 }
 
 
@@ -436,7 +444,7 @@ def plot_stage1_comparison(summary_df, study_results, save_dir, signal_name='TEM
         if not np.isnan(v):
             axes[2].text(v + 0.01, i, f'{v:.3f}', va='center', fontsize=9)
 
-    fig.suptitle(f'Stage 1 Baseline Comparison — 10 Models on CATSA→EmpaticaE4 ({signal_name})',
+    fig.suptitle(f'Stage 1 Baseline Comparison — 11 Models on CATSA→EmpaticaE4 ({signal_name})',
                  fontsize=13, fontweight='bold')
     plt.tight_layout()
 
