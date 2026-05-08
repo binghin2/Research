@@ -59,29 +59,8 @@
     "e4_f1":0.9454545455,
     "e4_precision":0.9240710824,
     "e4_recall":0.9678510998,
-    "e4_auroc":0.9056358193,
+    "e4_auroc":0.9051151894,
     "total_time_min":1.9868101233
-  },
-  {
-    "model":"Chronos2",
-    "status":"OK",
-    "best_val_f1":0.8964218405,
-    "best_trial_num":1,
-    "n_trials_completed":8,
-    "n_trials_pruned":7,
-    "n_trials_failed":0,
-    "best_lr":0.0001306674,
-    "best_batch_size":128,
-    "best_dropout":0.2404460047,
-    "best_weight_decay":0.0039676051,
-    "best_focal_gamma":2.0,
-    "best_model_specific":"{}",
-    "e4_accuracy":0.9028400598,
-    "e4_f1":0.9433304272,
-    "e4_precision":0.9730215827,
-    "e4_recall":0.9153976311,
-    "e4_auroc":0.9494772007,
-    "total_time_min":2.8831882038
   },
   {
     "model":"CrossGNN",
@@ -164,7 +143,7 @@
     "e4_f1":0.9330024814,
     "e4_precision":0.9126213592,
     "e4_recall":0.9543147208,
-    "e4_auroc":0.8151763634,
+    "e4_auroc":0.8151329776,
     "total_time_min":1.2477506546
   },
   {

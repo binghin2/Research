@@ -210,7 +210,24 @@ def evaluate_on_e4(model, e4_data_per_subject, device, use_bf16: bool = True, ch
             probs.append(torch.sigmoid(lg).cpu().numpy())
 
         prob = np.concatenate(probs)
-        y_pred = (prob >= 0.5).astype(int)
+        # Ensure 1-D probability vector for the positive class
+        prob = np.asarray(prob)
+        if prob.ndim > 1:
+            # common case: shape (N,1)
+            if prob.shape[1] == 1:
+                prob = prob.ravel()
+            # case: model returned two-class logits/probs -> convert to positive-class prob
+            elif prob.shape[1] == 2:
+                # softmax across class dim then take class 1 probability
+                exp = np.exp(prob - np.max(prob, axis=1, keepdims=True))
+                prob = (exp / exp.sum(axis=1, keepdims=True))[:, 1]
+            else:
+                raise ValueError(f"Unexpected model output shape for probabilities: {prob.shape}.\n"
+                                 "evaluate_on_e4 expects a single logit/prob or two-class logits.")
+
+        # Ensure y_true is 1-D
+        y_true = np.asarray(y_true).ravel().astype(int)
+        y_pred = (prob >= 0.5).astype(int).ravel()
 
         per_subject.append(
             {
@@ -225,7 +242,7 @@ def evaluate_on_e4(model, e4_data_per_subject, device, use_bf16: bool = True, ch
 
         all_true.extend(y_true.tolist())
         all_pred.extend(y_pred.tolist())
-        all_prob.extend(prob.tolist())
+        all_prob.extend(np.asarray(prob).ravel().tolist())
 
     if not all_true:
         return {"overall": None, "per_subject": per_subject}
