@@ -184,7 +184,7 @@ If you use this code or results, please cite:
 
 ```bibtex
 @misc{park2026biosignal,
-  author    = {Park, Siwon},
+  author    = {Byunghyun Mo},
   title     = {Biosignal-based Stress Classification with Deep Learning},
   year      = {2026},
   publisher = {GitHub},
