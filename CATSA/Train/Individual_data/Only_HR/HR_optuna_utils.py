@@ -25,6 +25,7 @@ COMMON_SEARCH_SPACE: dict[str, Any] = {
     "wd":      ("float", 1e-5, 1e-2, True),
     "dropout": ("float", 0.0,  0.4,  False),
     "bs":      ("categorical", [32, 64, 128]),
+    "patience": ("int", 50, 100),
 }
 
 # Per-model search spaces on top of COMMON_SEARCH_SPACE.

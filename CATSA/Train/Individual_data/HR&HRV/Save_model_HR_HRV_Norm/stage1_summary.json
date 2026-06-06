@@ -1,0 +1,23 @@
+[
+  {
+    "model":"iTransformer",
+    "status":"OK",
+    "best_val_f1":0.8981001677,
+    "best_trial_num":12,
+    "n_trials_completed":15,
+    "n_trials_pruned":0,
+    "n_trials_failed":0,
+    "best_lr":0.0001420602,
+    "best_batch_size":32,
+    "best_dropout":0.1463156604,
+    "best_weight_decay":0.000558925,
+    "best_focal_gamma":2.0,
+    "best_model_specific":"{\"d_model\": 256, \"n_heads\": 8, \"n_layers\": 3, \"d_ff\": 128, \"patience\": 62}",
+    "e4_accuracy":null,
+    "e4_f1":null,
+    "e4_precision":null,
+    "e4_recall":null,
+    "e4_auroc":null,
+    "total_time_min":17.7939253407
+  }
+]

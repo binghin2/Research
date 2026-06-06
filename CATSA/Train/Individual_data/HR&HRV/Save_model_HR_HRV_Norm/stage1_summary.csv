@@ -1,0 +1,2 @@
+model,status,best_val_f1,best_trial_num,n_trials_completed,n_trials_pruned,n_trials_failed,best_lr,best_batch_size,best_dropout,best_weight_decay,best_focal_gamma,best_model_specific,e4_accuracy,e4_f1,e4_precision,e4_recall,e4_auroc,total_time_min
+iTransformer,OK,0.898100167732467,12,15,0,0,0.00014206022289968203,32,0.14631566043242208,0.0005589249518555286,2.0,"{""d_model"": 256, ""n_heads"": 8, ""n_layers"": 3, ""d_ff"": 128, ""patience"": 62}",,,,,,17.793925340749897

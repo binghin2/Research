@@ -1,3 +1,20 @@
 .aider*
 *.pt
 *.tar.gz
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Claude Code internals
+.claude/
+*:Zone.Identifier
+
+# IDE
+.vscode/

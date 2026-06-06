@@ -565,7 +565,7 @@ def make_objective(
     Returns (objective_fn, best_f1_ref, best_hp_ref).
     best_f1_ref[0] and best_hp_ref[0] are updated in-place after each trial.
     """
-    from HRV_models_ten import build_model  # local import to avoid circular deps
+    from HR_HRV_models_ten import build_model
 
     save_dir = Path(save_dir)
     save_dir.mkdir(parents=True, exist_ok=True)

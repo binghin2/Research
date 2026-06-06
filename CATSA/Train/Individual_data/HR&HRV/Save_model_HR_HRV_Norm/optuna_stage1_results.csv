@@ -1,0 +1,2 @@
+model,val_f1,trial_no,lr,wd,dropout,bs,d_model,n_heads,n_layers,d_ff,patience,e4_accuracy,e4_f1,e4_precision,e4_recall,e4_auroc
+iTransformer,0.898100167732467,12,0.00014206022289968203,0.0005589249518555286,0.14631566043242208,32,256,8,3,128,62,,,,,
